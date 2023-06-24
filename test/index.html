@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+  <!-- <div id="player"></div> -->
+  <img src="https://ilbcedu-my.sharepoint.com/personal/kaungzayarmin_ilbc_edu_mm/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fkaungzayarmin%5Filbc%5Fedu%5Fmm%2FDocuments%2Fkid%2Epng&parent=%2Fpersonal%2Fkaungzayarmin%5Filbc%5Fedu%5Fmm%2FDocuments&ga=1" alt="dfdf">
+
+  <script>
+    // This function will be called when the YouTube API is ready
+    function onYouTubeIframeAPIReady() {
+      // Create an instance of the YouTube player
+      var player = new YT.Player('player', {
+        videoId: '8zt_lV08ms8',
+        playerVars: {
+        //   color: 'white',            // Customize the color of player controls
+          modestbranding: 1,       // Hide the YouTube logo
+          rel: 0,                  // Hide related videos
+          showinfo: 0,             // Hide video title and uploader info
+          iv_load_policy: 3,       // Hide video annotations
+          disablekb: 1             // Disable keyboard controls
+        },
+        events: {
+          // You can define event handlers here if needed
+        }
+      });
+    }
+  </script>
+</body>
+</html>

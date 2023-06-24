@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>hello</h3>
+
+    <input type="text" />
+    <button id="add-btn">add</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io("http://localhost:8080");
+      const btn = document.getElementById("add-btn");
+      btn.addEventListener("click", function () {
+        console.log(socket.id);
+        socket.emit("message", "message data");
+        socket.emit('hello')
+      });
+      
+      socket.on("barnyar", (data) => {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
